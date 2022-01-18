@@ -28,7 +28,7 @@ export const Button = ({
 
 Button.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * primary or secondary colors
    */
   primary: PropTypes.bool,
   /**
@@ -36,23 +36,16 @@ Button.propTypes = {
    */
   backgroundColor: PropTypes.string,
   /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  /**
    * Button contents
    */
   label: PropTypes.string.isRequired,
   /**
-   * Optional click handler
+   * name of the class used for styling
    */
-  onClick: PropTypes.func,
   className: PropTypes.string,
 };
 
 Button.defaultProps = {
   backgroundColor: null,
-  primary: false,
-  size: "medium",
-  onClick: undefined,
+  primary: true,
 };
